@@ -8,6 +8,7 @@ Getting Started:
 1) Download biopython and pygames so everything runs smoothly
 2) Run " pip install biopython " and " python3 -m pip install -U pygame --user " in the terminal to download the required software
 3) Download the main game zip file and upload the file into VS Code to run and play ;)
+4) Make sure to run the py file labeled " Main_Game_DD.py " to access the game
 
 Link to video: https://www.youtube.com/watch?v=aKKc3mPiD0s
 
