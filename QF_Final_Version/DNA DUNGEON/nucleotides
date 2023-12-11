@@ -1,0 +1,40 @@
+from Bio.Seq import Seq
+import random
+
+nucleotides = ["A", "C", "G", "T"]
+
+def generate_sequence():
+    my_seq = ["A", "T", "G"]
+    
+    for i in range(6):
+        letter = random.choice(nucleotides)
+        my_seq.append(letter)
+
+    return Seq(''.join(my_seq))
+
+
+DNA_seq = generate_sequence()
+stop_codons = ["TAA", "TAG", "TGA"]
+while any(stop_codon in str(DNA_seq) for stop_codon in stop_codons):
+    # Regenerate the entire sequence if any stop codon is found
+    DNA_seq = generate_sequence()
+
+print("DNA")
+print(' '.join(str(DNA_seq)))  # Add a space between each nucleotide
+
+print()
+
+print('Complementary DNA')
+coding = DNA_seq.complement()
+print(' '.join(str(coding)))  # Add a space between each nucleotide
+
+print()
+
+print('mRNA')
+RNA_seq = DNA_seq.transcribe()
+print(' '.join(str(RNA_seq)))  # Add a space between each nucleotide
+
+print()
+
+translate = RNA_seq.translate()
+print(translate)
