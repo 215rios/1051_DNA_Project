@@ -9,4 +9,5 @@ Getting Started:
 2) Run " pip install biopython " and " python3 -m pip install -U pygame --user " in the terminal to download the required software
 3) Download the main game zip file and upload the file into VS Code to run and play ;)
 
-Link to video: 
+Link to video: https://www.youtube.com/watch?v=aKKc3mPiD0s
+
